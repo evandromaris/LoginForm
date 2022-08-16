@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --text-base: #afb6c2;
+    --text-title: #d4ccb6;
+    --background: #191816;
+    --form-background: #24221f;
+    --primary-color: #ffc632;
+    --font-poppins: 'Poppins', sans-serif;
+    --font-roboto: 'Roboto', sans-serif;
+    --font-24px: 1.5em;
+    --font-18px: 1.125em;
+    --font-16px: 1em;
+    --font-14px: 0.875em;
+    --font-12px: 0.75em;
+}
+
+body {
+    background: var(--background) url(images/side-image.jpg) no-repeat right center ;
+    padding: 2.5rem 0 0 2.5rem;    
+}
+
+form{
+    width: 35.75rem;
+    height: 32rem;
+    margin: 3rem 6rem ;
+    padding: 4rem 0 0 7rem;
+    background-color: var(--form-background);
+    box-sizing: border-box;
+    color: var(--text-base);
+    border-radius: 0.25rem;
+    display: flex;
+}
+
+fieldset{
+    border: none;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font: 600 var(--font-24px) var(--font-poppins);
+    color: var(--text-title);
+}
+
+fieldset p:nth-child(2){
+    font: 500 var(--font-16px) var(--font-roboto);
+    margin-top: .3rem;
+}
+
+.name{
+    margin-top: 2rem;
+}
+
+.name , .psw {
+    font: 500 var(--font-16px) var(--font-poppins);
+}
+
+.name input{
+    background: var(--form-background) url(images/mail.svg) no-repeat .5rem center;
+}
+
+.psw input {
+    background: url(images/lock.svg) no-repeat .5rem center, var(--form-background) url(images/eye.svg) no-repeat 19rem center;
+}
+
+
+.name input, .psw input{
+    width: 20.938rem;
+    height: 2.75rem;
+    border: 1px solid #afb6c2;
+    outline: 0;
+    border-radius: 0.25rem;
+    padding-left: 2rem; 
+    box-sizing: border-box;
+    font: 500 var(--font-14px) var(--font-roboto);
+    color: var(--text-base);
+    
+}
+
+.name input:focus-within {
+    border: 2px solid var(--primary-color);
+    background: url(images/mail-focus.svg) no-repeat .5rem center;
+    color: var(--text-base);   
+}
+
+.psw input:focus-within {
+    border: 2px solid var(--primary-color);
+    background: url(images/lock-focus.svg) no-repeat .5rem center, var(--form-background) url(images/eye.svg) no-repeat 19rem center;
+    color: var(--text-base);   
+}
+
+
+.check-remember {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 4.5rem;
+    font: 400 var(--font-16px) var(--font-roboto);
+    color: #A9AFB9;
+}
+
+.check-remember input {
+    display: none;     
+}
+
+.check-remember input + label:before{
+    content: '';
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 1px solid var(--text-base);
+    border-radius: 0.25rem;
+    background-color: var(--form-background); 
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 .5rem .2rem 0;
+    box-sizing: border-box;
+}
+
+.check-remember input:checked + label:before{
+    background: var(--primary-color) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='20px' viewBox='0 0 24 24' width='20px' fill='473404'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") no-repeat center;
+    border: none;
+    
+}
+
+.check-remember a{
+    text-decoration: none;
+    font: 500 var(--font-14px) var(--font-poppins);
+    color: var(--primary-color);
+}
+
+
+button {
+    width: 20.875rem;
+    height: 3.188rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: var(--primary-color);
+    color: #473404;
+    font: 600 var(--font-18px) var(--font-poppins);
+}
+
+.register p{
+    text-align: center;
+    margin-top: .5rem;
+    font: 400 var(--font-14px) var(--font-poppins);
+    color: var(--primary-color);
+}
+
+.register a{
+    font: 600 var(--font-16px) var(--font-poppins);
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+footer{
+    color: var(--text-base);
+    opacity: 70%;
+    margin-left: 19rem;
+    padding: 0;
+    font: 400 var(--font-12px) var(--font-roboto);
+}
+
+@media (max-width: 80rem){
+    body{
+        background-image: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+   header{
+    margin: 2.5rem 13rem 0 0 ;
+    position: absolute;
+   }
+
+    form{
+        width: 21.438rem;
+        background-color: var(--background);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+        padding: 0;
+    }
+
+    footer{
+        text-align: center;
+        margin: 0;
+    }
+}
